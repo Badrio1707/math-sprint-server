@@ -10,6 +10,7 @@ export default async function handler(req, res) {
       await connectDB();
       isConnected = true;
     }
+    console.log("REQ HIT:", req.url);
 
     return app(req, res);
   } catch (error) {
